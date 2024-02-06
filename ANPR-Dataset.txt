@@ -1,0 +1,18 @@
+ANPR Dataset URL
+https://universe.roboflow.com/mochoye/license-plate-detector-ogxxg
+
+How to download this dataset
+Click on "download this dataset"
+Choose format "Yolov8'
+copy following lines of code into your .ipynb file if you wanted to traing your model by yourself
+--------------------------------------------------
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="QA8l9ZRsEDJDM29JqmrP")
+project = rf.workspace("mochoye").project("license-plate-detector-ogxxg")
+dataset = project.version(2).download("yolov8")
+--------------------------------------------------
+OR
+you may download a zip folder of dataset into your personal computer using following URL
+https://universe.roboflow.com/ds/EpaiIv65Au?key=SYQLEOuq7s
